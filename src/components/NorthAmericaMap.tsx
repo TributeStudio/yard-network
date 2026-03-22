@@ -109,7 +109,7 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
                 <circle cx={pos.x - radius * 0.2} cy={pos.y - radius * 0.2} r={radius * 0.25} fill="rgba(255,255,255,0.45)" style={{ pointerEvents: "none" }} />
                 {isClickable && (
                   <circle cx={pos.x} cy={pos.y} r={14} fill="transparent" style={{ cursor: "pointer" }} onClick={(e) => onYardClick(yard, e)} onMouseEnter={() => setHoveredYard(yard.id)} onMouseLeave={() => setHoveredYard(null)}>
-                    <title>{yard.name} â {yard.city}, {yard.state}</title>
+                    <title>{yard.name} — {yard.city}, {yard.state}</title>
                   </circle>
                 )}
                 {isHovered && isClickable && (
@@ -125,7 +125,7 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
 
         {/* Map title */}
         <text x="50" y="30" style={{ fontSize: 10, fontWeight: 600, fill: "var(--text-tertiary)", letterSpacing: "0.1em", fontFamily: "'JetBrains Mono', monospace" }}>
-          NORTH AMERICA â REGIONAL FACILITY DEPLOYMENT ({yards.length} SITES)
+          NORTH AMERICA - REGIONAL FACILITY DEPLOYMENT ({yards.length} SITES)
         </text>
       </svg>
     </div>
