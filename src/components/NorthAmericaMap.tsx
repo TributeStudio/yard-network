@@ -18,10 +18,10 @@ interface MapProps {
 }
 
 function latLngToSvg(lat: number, lng: number): { x: number; y: number } {
-  const minLng = -132;
-  const maxLng = -58;
-  const minLat = 14;
-  const maxLat = 56;
+  const minLng = -130;
+  const maxLng = -62;
+  const minLat = 20;
+  const maxLat = 53;
   const x = ((lng - minLng) / (maxLng - minLng)) * 900 + 50;
   const y = ((maxLat - lat) / (maxLat - minLat)) * 560 + 40;
   return { x, y };
@@ -44,13 +44,13 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
         {/* Graticule grid */}
         <g opacity="0.04" stroke="var(--text-tertiary)" strokeWidth="0.5">
           {[-120, -110, -100, -90, -80, -70].map((lng) => {
-            const top = latLngToSvg(55, lng);
-            const bot = latLngToSvg(15, lng);
+            const top = latLngToSvg(52, lng);
+            const bot = latLngToSvg(21, lng);
             return <line key={`lng${lng}`} x1={top.x} y1={top.y} x2={bot.x} y2={bot.y} />;
           })}
-          {[20, 25, 30, 35, 40, 45, 50].map((lat) => {
-            const left = latLngToSvg(lat, -130);
-            const right = latLngToSvg(lat, -60);
+          {[25, 30, 35, 40, 45, 50].map((lat) => {
+            const left = latLngToSvg(lat, -128);
+            const right = latLngToSvg(lat, -64);
             return <line key={`lat${lat}`} x1={left.x} y1={left.y} x2={right.x} y2={right.y} />;
           })}
         </g>
@@ -68,8 +68,8 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
         <path className="map-land" d={HAWAII_PATH} />
 
         {/* Labels */}
-        <text x="80" y="540" style={{ fontSize: 7, fill: "var(--text-tertiary)", fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.05em" }}>AK</text>
-        <text x="190" y="575" style={{ fontSize: 7, fill: "var(--text-tertiary)", fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.05em" }}>HI</text>
+        <text x="70" y="560" style={{ fontSize: 7, fill: "var(--text-tertiary)", fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.05em" }}>AK</text>
+        <text x="190" y="595" style={{ fontSize: 7, fill: "var(--text-tertiary)", fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.05em" }}>HI</text>
 
         {/* Connection lines */}
         <g opacity="0.04" stroke="var(--accent-primary)" strokeWidth="0.5">
@@ -109,7 +109,7 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
                 <circle cx={pos.x - radius * 0.2} cy={pos.y - radius * 0.2} r={radius * 0.25} fill="rgba(255,255,255,0.45)" style={{ pointerEvents: "none" }} />
                 {isClickable && (
                   <circle cx={pos.x} cy={pos.y} r={14} fill="transparent" style={{ cursor: "pointer" }} onClick={(e) => onYardClick(yard, e)} onMouseEnter={() => setHoveredYard(yard.id)} onMouseLeave={() => setHoveredYard(null)}>
-                    <title>{yard.name} — {yard.city}, {yard.state}</title>
+                    <title>{yard.name} â {yard.city}, {yard.state}</title>
                   </circle>
                 )}
                 {isHovered && isClickable && (
@@ -125,7 +125,7 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
 
         {/* Map title */}
         <text x="50" y="30" style={{ fontSize: 10, fontWeight: 600, fill: "var(--text-tertiary)", letterSpacing: "0.1em", fontFamily: "'JetBrains Mono', monospace" }}>
-          NORTH AMERICA — REGIONAL FACILITY DEPLOYMENT ({yards.length} SITES)
+          NORTH AMERICA â REGIONAL FACILITY DEPLOYMENT ({yards.length} SITES)
         </text>
       </svg>
     </div>
