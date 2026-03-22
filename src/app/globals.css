@@ -106,27 +106,27 @@ body {
 
 /* Map water color */
 .map-water {
-  fill: #dce8f3;
+  fill: #c8d8ea;
   transition: fill var(--transition-base);
 }
 
 [data-theme="dark"] .map-water {
-  fill: #0d1830;
+  fill: #0a1425;
 }
 
 .map-land {
-  fill: #e4eaf2;
-  stroke: #c8d3e0;
-  stroke-width: 0.6;
+  fill: #f0f4f8;
+  stroke: #b0bec5;
+  stroke-width: 1;
   transition: fill var(--transition-base), stroke var(--transition-base);
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.04));
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
 }
 
 [data-theme="dark"] .map-land {
-  fill: #1c2845;
-  stroke: #2a3a5c;
-  stroke-width: 0.6;
-  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.06));
+  fill: #1e3050;
+  stroke: #3a5280;
+  stroke-width: 1;
+  filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.12));
 }
 
 /* Yard marker pulse animation */
