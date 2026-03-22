@@ -58,10 +58,10 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
         </g>
 
         {/* Canada outline */}
-            <path className="map-neighbor" d={CANADA_PATH} fill="var(--map-neighbor-fill, rgba(200,210,220,0.3))" stroke="var(--map-neighbor-stroke, #b0bec5)" strokeWidth="0.5" opacity="0.5" />
+            <path className="map-neighbor" d={CANADA_PATH} fill="var(--map-neighbor-fill)" stroke="var(--map-neighbor-stroke)" strokeWidth="0.8" opacity="0.7" />
 
             {/* Mexico outline */}
-            <path className="map-neighbor" d={MEXICO_PATH} fill="var(--map-neighbor-fill, rgba(200,210,220,0.3))" stroke="var(--map-neighbor-stroke, #b0bec5)" strokeWidth="0.5" opacity="0.5" />
+            <path className="map-neighbor" d={MEXICO_PATH} fill="var(--map-neighbor-fill)" stroke="var(--map-neighbor-stroke)" strokeWidth="0.8" opacity="0.7" />
 
             {/* Continental US landmass */}
         <path className="map-land" d={US_CONTINENTAL_PATH} />
