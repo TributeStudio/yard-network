@@ -10,8 +10,8 @@
   --bg-map: #f0f4f8;
   --bg-tooltip: #ffffff;
   --map-border: #b0bec5;
-  --map-neighbor-fill: rgba(215, 225, 235, 0.4);
-  --map-neighbor-stroke: #b0bec5;
+  --map-neighbor-fill: rgba(205, 218, 232, 0.6);
+  --map-neighbor-stroke: #90a4ae;
 
   --text-primary: #0a0f1e;
   --text-secondary: #4a5568;
@@ -63,8 +63,8 @@
   --bg-map: #0d1220;
   --bg-tooltip: #1a2035;
   --map-border: #2a4060;
-  --map-neighbor-fill: rgba(15, 25, 45, 0.6);
-  --map-neighbor-stroke: #1a3355;
+  --map-neighbor-fill: rgba(18, 32, 58, 0.8);
+  --map-neighbor-stroke: #1e4080;
 
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
