@@ -41,10 +41,11 @@ export default function Header({ theme, toggleTheme, counts, activeSimulation }:
               boxShadow: "var(--shadow-glow)",
             }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M1 3h15v13H1z" />
+              <path d="M16 8h4l3 3v5h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
             </svg>
           </div>
           <div>
@@ -101,7 +102,7 @@ export default function Header({ theme, toggleTheme, counts, activeSimulation }:
               backgroundColor: activeSimulation === "current" ? "var(--status-green)" : "var(--accent-primary)",
               boxShadow: activeSimulation === "current"
                 ? "0 0 8px rgba(34, 197, 94, 0.5)"
-                : "0 0 8px rgba(99, 91, 255, 0.5)",
+                : "0 0 8px rgba(37, 99, 235, 0.5)",
               animation: activeSimulation === "current" ? "svg-pulse-green 2s ease-in-out infinite" : undefined,
             }}
           />
