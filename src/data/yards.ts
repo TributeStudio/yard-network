@@ -52,7 +52,7 @@ export const BASE_YARDS: Yard[] = [
   ]},
 
   // === GREEN YARDS (41) ===
-  { id: 10, name: "San Francisco Bay Hub", city: "San Francisco", state: "CA", lat: 37.77, lng: -123.42, status: "green", issues: [] },
+  { id: 10, name: "San Francisco Bay Hub", city: "San Francisco", state: "CA", lat: 37.77, lng: -122.42, status: "green", issues: [] },
   { id: 11, name: "Portland NW Terminal", city: "Portland", state: "OR", lat: 45.52, lng: -122.68, status: "green", issues: [] },
   { id: 12, name: "Denver Mile High Yard", city: "Denver", state: "CO", lat: 39.74, lng: -104.99, status: "green", issues: [] },
   { id: 13, name: "Salt Lake Crossroads", city: "Salt Lake City", state: "UT", lat: 40.76, lng: -111.89, status: "green", issues: [] },
