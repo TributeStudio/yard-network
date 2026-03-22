@@ -41,12 +41,17 @@ export default function Header({ theme, toggleTheme, counts, activeSimulation }:
               boxShadow: "var(--shadow-glow)",
             }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M1 3h15v13H1z" />
-              <path d="M16 8h4l3 3v5h-7V8z" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 33 33" fill="none">
+                <path d="M7 18 C10 18, 12 16, 14 14" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                <path d="M14 22 C14 18, 14 16, 14 14" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                <path d="M14 14 C16 12, 19 12, 22 14" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                <path d="M22 14 L26 18" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                <circle cx="7" cy="18" r="2" fill="white"/>
+                <circle cx="14" cy="22" r="2" fill="white"/>
+                <circle cx="14" cy="14" r="2.25" fill="white"/>
+                <circle cx="26" cy="18" r="2" fill="white"/>
+                <circle cx="16" cy="16" r="14.5" stroke="white" strokeWidth="1" opacity="0.35" fill="none"/>
+              </svg>
           </div>
           <div>
             <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text-primary)" }}>
