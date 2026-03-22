@@ -9,6 +9,7 @@
   --bg-overlay: rgba(255, 255, 255, 0.85);
   --bg-map: #f0f4f8;
   --bg-tooltip: #ffffff;
+  --map-border: #b0bec5;
 
   --text-primary: #0a0f1e;
   --text-secondary: #4a5568;
@@ -59,6 +60,7 @@
   --bg-overlay: rgba(10, 15, 30, 0.9);
   --bg-map: #0d1220;
   --bg-tooltip: #1a2035;
+  --map-border: #2a4060;
 
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
@@ -106,27 +108,27 @@ body {
 
 /* Map water color */
 .map-water {
-  fill: #c8d8ea;
+  fill: #d0dcea;
   transition: fill var(--transition-base);
 }
 
 [data-theme="dark"] .map-water {
-  fill: #0a1425;
+  fill: #080f1e;
 }
 
 .map-land {
-  fill: #f0f4f8;
-  stroke: #b0bec5;
-  stroke-width: 1;
+  fill: #e8eef5;
+  stroke: #9ab0c4;
+  stroke-width: 0.8;
   transition: fill var(--transition-base), stroke var(--transition-base);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.06));
 }
 
 [data-theme="dark"] .map-land {
-  fill: #1e3050;
-  stroke: #3a5280;
-  stroke-width: 1;
-  filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.12));
+  fill: #152540;
+  stroke: #2563eb;
+  stroke-width: 0.6;
+  filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.15));
 }
 
 /* Yard marker pulse animation */
