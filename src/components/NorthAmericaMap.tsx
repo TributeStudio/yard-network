@@ -9,6 +9,8 @@ import {
   US_STATE_BORDERS_PATH,
   ALASKA_PATH,
   HAWAII_PATH,
+  CANADA_PATH,
+  MEXICO_PATH,
 } from "@/data/us-map-paths";
 
 interface MapProps {
@@ -55,7 +57,13 @@ export default function NorthAmericaMap({ yards, onYardClick, activeSimulation }
           })}
         </g>
 
-        {/* Continental US landmass */}
+        {/* Canada outline */}
+            <path className="map-neighbor" d={CANADA_PATH} fill="var(--map-neighbor-fill, rgba(200,210,220,0.3))" stroke="var(--map-neighbor-stroke, #b0bec5)" strokeWidth="0.5" opacity="0.5" />
+
+            {/* Mexico outline */}
+            <path className="map-neighbor" d={MEXICO_PATH} fill="var(--map-neighbor-fill, rgba(200,210,220,0.3))" stroke="var(--map-neighbor-stroke, #b0bec5)" strokeWidth="0.5" opacity="0.5" />
+
+            {/* Continental US landmass */}
         <path className="map-land" d={US_CONTINENTAL_PATH} />
 
         {/* State borders */}
